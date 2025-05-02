@@ -1,0 +1,23 @@
+Bootstrap: docker
+From: pytorch/pytorch:2.7.0-cuda11.8-cudnn9-runtime
+
+%post
+    # only needed if you want to run bitsandbytes / triton
+    apt-get update && apt-get install -y --no-install-recommends gcc g++ \
+      && rm -rf /var/lib/apt/lists/*
+
+    pip install --upgrade \
+      transformers \
+      accelerate \
+      bitsandbytes \
+      datasets \
+      peft \
+      trl \
+      sentencepiece \
+      tokenizers
+
+%environment
+    export LC_ALL=C.UTF-8
+    export LANG=C.UTF-8
+    export CC=/usr/bin/gcc
+    export CXX=/usr/bin/g++
