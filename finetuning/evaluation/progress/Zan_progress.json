@@ -1,0 +1,428 @@
+{
+  "scenario_idx": {
+    "finetuned_gams9b_eval": 30,
+    "finetuned_instructed_gams9b_eval": 30
+  },
+  "entries": [
+    {
+      "evaluator": "Zan",
+      "scenario": "finetuned_gams9b_eval",
+      "example": 1,
+      "rating": 4,
+      "better": 1
+    },
+    {
+      "evaluator": "Zan",
+      "scenario": "finetuned_gams9b_eval",
+      "example": 2,
+      "rating": 5,
+      "better": 1
+    },
+    {
+      "evaluator": "Zan",
+      "scenario": "finetuned_gams9b_eval",
+      "example": 3,
+      "rating": 1,
+      "better": 0
+    },
+    {
+      "evaluator": "Zan",
+      "scenario": "finetuned_gams9b_eval",
+      "example": 4,
+      "rating": 5,
+      "better": 1
+    },
+    {
+      "evaluator": "Zan",
+      "scenario": "finetuned_gams9b_eval",
+      "example": 5,
+      "rating": 3,
+      "better": 0
+    },
+    {
+      "evaluator": "Zan",
+      "scenario": "finetuned_gams9b_eval",
+      "example": 6,
+      "rating": 4,
+      "better": 1
+    },
+    {
+      "evaluator": "Zan",
+      "scenario": "finetuned_gams9b_eval",
+      "example": 7,
+      "rating": 5,
+      "better": 1
+    },
+    {
+      "evaluator": "Zan",
+      "scenario": "finetuned_gams9b_eval",
+      "example": 8,
+      "rating": 1,
+      "better": 0
+    },
+    {
+      "evaluator": "Zan",
+      "scenario": "finetuned_gams9b_eval",
+      "example": 9,
+      "rating": 1,
+      "better": 0
+    },
+    {
+      "evaluator": "Zan",
+      "scenario": "finetuned_gams9b_eval",
+      "example": 10,
+      "rating": 5,
+      "better": 1
+    },
+    {
+      "evaluator": "Zan",
+      "scenario": "finetuned_gams9b_eval",
+      "example": 11,
+      "rating": 4,
+      "better": 1
+    },
+    {
+      "evaluator": "Zan",
+      "scenario": "finetuned_gams9b_eval",
+      "example": 12,
+      "rating": 5,
+      "better": 1
+    },
+    {
+      "evaluator": "Zan",
+      "scenario": "finetuned_gams9b_eval",
+      "example": 13,
+      "rating": 3,
+      "better": 0
+    },
+    {
+      "evaluator": "Zan",
+      "scenario": "finetuned_gams9b_eval",
+      "example": 14,
+      "rating": 3,
+      "better": 0
+    },
+    {
+      "evaluator": "Zan",
+      "scenario": "finetuned_gams9b_eval",
+      "example": 15,
+      "rating": 1,
+      "better": 0
+    },
+    {
+      "evaluator": "Zan",
+      "scenario": "finetuned_gams9b_eval",
+      "example": 16,
+      "rating": 4,
+      "better": 0
+    },
+    {
+      "evaluator": "Zan",
+      "scenario": "finetuned_gams9b_eval",
+      "example": 17,
+      "rating": 5,
+      "better": 0
+    },
+    {
+      "evaluator": "Zan",
+      "scenario": "finetuned_gams9b_eval",
+      "example": 18,
+      "rating": 2,
+      "better": 0
+    },
+    {
+      "evaluator": "Zan",
+      "scenario": "finetuned_gams9b_eval",
+      "example": 19,
+      "rating": 3,
+      "better": 1
+    },
+    {
+      "evaluator": "Zan",
+      "scenario": "finetuned_gams9b_eval",
+      "example": 20,
+      "rating": 3,
+      "better": 0
+    },
+    {
+      "evaluator": "Zan",
+      "scenario": "finetuned_gams9b_eval",
+      "example": 21,
+      "rating": 5,
+      "better": 1
+    },
+    {
+      "evaluator": "Zan",
+      "scenario": "finetuned_gams9b_eval",
+      "example": 22,
+      "rating": 4,
+      "better": 0
+    },
+    {
+      "evaluator": "Zan",
+      "scenario": "finetuned_gams9b_eval",
+      "example": 23,
+      "rating": 1,
+      "better": 0
+    },
+    {
+      "evaluator": "Zan",
+      "scenario": "finetuned_gams9b_eval",
+      "example": 24,
+      "rating": 3,
+      "better": 0
+    },
+    {
+      "evaluator": "Zan",
+      "scenario": "finetuned_gams9b_eval",
+      "example": 25,
+      "rating": 2,
+      "better": 0
+    },
+    {
+      "evaluator": "Zan",
+      "scenario": "finetuned_gams9b_eval",
+      "example": 26,
+      "rating": 4,
+      "better": 0
+    },
+    {
+      "evaluator": "Zan",
+      "scenario": "finetuned_gams9b_eval",
+      "example": 27,
+      "rating": 2,
+      "better": 0
+    },
+    {
+      "evaluator": "Zan",
+      "scenario": "finetuned_gams9b_eval",
+      "example": 28,
+      "rating": 5,
+      "better": 1
+    },
+    {
+      "evaluator": "Zan",
+      "scenario": "finetuned_gams9b_eval",
+      "example": 29,
+      "rating": 1,
+      "better": 1
+    },
+    {
+      "evaluator": "Zan",
+      "scenario": "finetuned_gams9b_eval",
+      "example": 30,
+      "rating": 1,
+      "better": 0
+    },
+    {
+      "evaluator": "Zan",
+      "scenario": "finetuned_instructed_gams9b_eval",
+      "example": 1,
+      "rating": 3,
+      "better": 1
+    },
+    {
+      "evaluator": "Zan",
+      "scenario": "finetuned_instructed_gams9b_eval",
+      "example": 2,
+      "rating": 4,
+      "better": 0
+    },
+    {
+      "evaluator": "Zan",
+      "scenario": "finetuned_instructed_gams9b_eval",
+      "example": 3,
+      "rating": 3,
+      "better": 0
+    },
+    {
+      "evaluator": "Zan",
+      "scenario": "finetuned_instructed_gams9b_eval",
+      "example": 4,
+      "rating": 4,
+      "better": 1
+    },
+    {
+      "evaluator": "Zan",
+      "scenario": "finetuned_instructed_gams9b_eval",
+      "example": 5,
+      "rating": 2,
+      "better": 0
+    },
+    {
+      "evaluator": "Zan",
+      "scenario": "finetuned_instructed_gams9b_eval",
+      "example": 6,
+      "rating": 5,
+      "better": 1
+    },
+    {
+      "evaluator": "Zan",
+      "scenario": "finetuned_instructed_gams9b_eval",
+      "example": 7,
+      "rating": 5,
+      "better": 1
+    },
+    {
+      "evaluator": "Zan",
+      "scenario": "finetuned_instructed_gams9b_eval",
+      "example": 8,
+      "rating": 3,
+      "better": 0
+    },
+    {
+      "evaluator": "Zan",
+      "scenario": "finetuned_instructed_gams9b_eval",
+      "example": 9,
+      "rating": 3,
+      "better": 0
+    },
+    {
+      "evaluator": "Zan",
+      "scenario": "finetuned_instructed_gams9b_eval",
+      "example": 10,
+      "rating": 5,
+      "better": 1
+    },
+    {
+      "evaluator": "Zan",
+      "scenario": "finetuned_instructed_gams9b_eval",
+      "example": 11,
+      "rating": 1,
+      "better": 0
+    },
+    {
+      "evaluator": "Zan",
+      "scenario": "finetuned_instructed_gams9b_eval",
+      "example": 12,
+      "rating": 4,
+      "better": 1
+    },
+    {
+      "evaluator": "Zan",
+      "scenario": "finetuned_instructed_gams9b_eval",
+      "example": 13,
+      "rating": 4,
+      "better": 1
+    },
+    {
+      "evaluator": "Zan",
+      "scenario": "finetuned_instructed_gams9b_eval",
+      "example": 14,
+      "rating": 1,
+      "better": 0
+    },
+    {
+      "evaluator": "Zan",
+      "scenario": "finetuned_instructed_gams9b_eval",
+      "example": 15,
+      "rating": 2,
+      "better": 0
+    },
+    {
+      "evaluator": "Zan",
+      "scenario": "finetuned_instructed_gams9b_eval",
+      "example": 16,
+      "rating": 5,
+      "better": 0
+    },
+    {
+      "evaluator": "Zan",
+      "scenario": "finetuned_instructed_gams9b_eval",
+      "example": 17,
+      "rating": 4,
+      "better": 1
+    },
+    {
+      "evaluator": "Zan",
+      "scenario": "finetuned_instructed_gams9b_eval",
+      "example": 18,
+      "rating": 2,
+      "better": 1
+    },
+    {
+      "evaluator": "Zan",
+      "scenario": "finetuned_instructed_gams9b_eval",
+      "example": 19,
+      "rating": 2,
+      "better": 0
+    },
+    {
+      "evaluator": "Zan",
+      "scenario": "finetuned_instructed_gams9b_eval",
+      "example": 20,
+      "rating": 3,
+      "better": 0
+    },
+    {
+      "evaluator": "Zan",
+      "scenario": "finetuned_instructed_gams9b_eval",
+      "example": 21,
+      "rating": 5,
+      "better": 1
+    },
+    {
+      "evaluator": "Zan",
+      "scenario": "finetuned_instructed_gams9b_eval",
+      "example": 22,
+      "rating": 4,
+      "better": 0
+    },
+    {
+      "evaluator": "Zan",
+      "scenario": "finetuned_instructed_gams9b_eval",
+      "example": 23,
+      "rating": 4,
+      "better": 1
+    },
+    {
+      "evaluator": "Zan",
+      "scenario": "finetuned_instructed_gams9b_eval",
+      "example": 24,
+      "rating": 4,
+      "better": 1
+    },
+    {
+      "evaluator": "Zan",
+      "scenario": "finetuned_instructed_gams9b_eval",
+      "example": 25,
+      "rating": 3,
+      "better": 0
+    },
+    {
+      "evaluator": "Zan",
+      "scenario": "finetuned_instructed_gams9b_eval",
+      "example": 26,
+      "rating": 4,
+      "better": 0
+    },
+    {
+      "evaluator": "Zan",
+      "scenario": "finetuned_instructed_gams9b_eval",
+      "example": 27,
+      "rating": 1,
+      "better": 0
+    },
+    {
+      "evaluator": "Zan",
+      "scenario": "finetuned_instructed_gams9b_eval",
+      "example": 28,
+      "rating": 5,
+      "better": 1
+    },
+    {
+      "evaluator": "Zan",
+      "scenario": "finetuned_instructed_gams9b_eval",
+      "example": 29,
+      "rating": 3,
+      "better": 0
+    },
+    {
+      "evaluator": "Zan",
+      "scenario": "finetuned_instructed_gams9b_eval",
+      "example": 30,
+      "rating": 3,
+      "better": 0
+    }
+  ]
+}
