@@ -3202,13 +3202,13 @@ Podatki o prometu.
 Na štajerski avtocesti proti Mariboru je zaradi pokvarjenega tovornega vozila zaprt pas za počasna vozila med Blagovico in Trojanami pred predorom Podmilj.
 Zaradi poplav zemeljskih plazov so zaprte številne državne ceste, predvsem na Štajerskem, Koroškem, Gorenjskem in severnem Primorskem.
 Med drugimi so zaprte ceste:
--       Maribor-Dravograd,
--       Dravograd-Slovenj Gradec,
--       Celje-Laško-Radeče,
--       Ljubljana-Litija-Zagorje-Hrastnik-Zidani Most,
--       Hrastnik-Marno-Rimske Toplice,
--       Dobrova-Polhov Gradec-Ljubljanica in
--       Begunje-Tržič.
+-	Maribor-Dravograd,
+-	Dravograd-Slovenj Gradec,
+-	Celje-Laško-Radeče,
+-	Ljubljana-Litija-Zagorje-Hrastnik-Zidani Most,
+-	Hrastnik-Marno-Rimske Toplice,
+-	Dobrova-Polhov Gradec-Ljubljanica in
+-	Begunje-Tržič.
 Vozišče je zaprto tudi na cestah od Mežice in od Šoštanja proti Črni na Koroškem ter od Kamnika proti Kamniški Bistrici in proti Gornjemu Gradu.
 
 MODEL-OUTPUT:
@@ -3216,14 +3216,14 @@ MODEL-OUTPUT:
 Podatki o prometu.
 Zaradi poplav so zaprte številne ceste na severno Primorskem, Koroškem, Štajerskem, v Zasavju in v Osrednji Sloveniji.
 Med drugimi so zaprte ceste:
--       Celje-Laško-Radeče,
--       Ljubljana-Litija-Zagorje-Hrastnik-Zidani Most,
--       Hrastnik-Marno-Rimske Toplice,
--       Trebija-Žiri-Rovte,
--       Dobrova-Polhov Gradec-Ljubljanica,
--       Preddvor-Jezerski vrh,
--       Begunje-Tržič in
--       Ljubno-Solčava.
+-	Celje-Laško-Radeče,
+-	Ljubljana-Litija-Zagorje-Hrastnik-Zidani Most,
+-	Hrastnik-Marno-Rimske Toplice,
+-	Trebija-Žiri-Rovte,
+-	Dobrova-Polhov Gradec-Ljubljanica,
+-	Preddvor-Jezerski vrh,
+-	Begunje-Tržič in
+-	Ljubno-Solčava.
 Zaprta je tudi cesta od Kamnika proti Kamniški Bistrici in proti Gornjemu Gradu.
 
 
@@ -4023,3 +4023,4 @@ Zaradi del je krajši zastoj tudi na zahodni ljubljanski obvoznici med razcepom 
 
 
 ======================================================================
+

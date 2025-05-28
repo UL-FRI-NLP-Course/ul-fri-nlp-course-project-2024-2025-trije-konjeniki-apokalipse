@@ -87,7 +87,8 @@ Zaradi burje je na regionalnih cestah Razdrto-Podnanos-Manče-Vipava in Vipava-A
 
 MODEL-OUTPUT:
 Podatki o prometu.
-Na štajerski avtocesti proti Ljubljani je zaradi pokvarjenega tovornjaka promet oviran med priključkom Slovenske Konjice in predorom Golo Rebro.
+Na štajerski avtocesti proti Ljubljani je zaradi pokvarjenega tovornjaka promet oviran med priključkoma Slovenske Konjice in Dramlje.
+Zaradi burje je na vipavski hitri cesti med razcepom Nanos in priključkom Ajdovščina prepovedan promet za počitniške prikolice, hladilnike in vozila s ponjavami, lažja od 8 ton.
 
 
 ================================================================================
@@ -237,8 +238,8 @@ Na gorenjski avtocesti je zaradi del pred priključkom Brezje zaprt prehitevalni
 
 MODEL-OUTPUT:
 Podatki o prometu.
-Na primorski avtocesti je zaradi pokvarjenega tovornjaka zaprt pas za počasna vozila med Vrhniko in Logatcem proti Kopru.
-Zaradi del je na štajerski avtocesti med priključkoma Slovenska Bistrica-jug in Slovenska Bistrica-sever zaprt vozni pas proti Mariboru.
+Na primorski avtocesti je zaradi pokvarjenega tovornjaka oviran promet med Vrhniko in Logatcem proti Kopru.
+Zaradi del je na štajerski avtocesti proti Mariboru zaprt vozni pas med Dramljami in Slovenskimi Konjicami v predoru Pletovarje.
 
 
 ================================================================================
@@ -327,10 +328,9 @@ Zaradi del so zastoji na cestah na območju Otiškega Vrha in Dravograda.
 Na primorski avtocesti proti Ljubljani je zaradi pokvarjenega tovornjaka promet oviran med predorom Kastelec in priključkom Kozina.
 
 MODEL-OUTPUT:
-Podatki o prometu.
+Podatki o prometu:
 Na primorski avtocesti proti Ljubljani je zaradi pokvarjenega vozila promet oviran med priključkoma Kastelec in Kozina.
-Zaradi del je na štajerski avtocesti proti Mariboru zaprt vozni pas med Dramljami in Slovenskimi Konjicami v predoru Pletovarje.
-Na gorenjski avtocesti proti Karavankam je zaradi del zaprt vozni pas med priključkoma Brezje in Radovljica.
+Zaradi del je na štajerski avtocesti proti Mariboru zaprt vozni pas med Trojanami in Vranskim v predoru Jasovnik.
 
 
 ================================================================================
@@ -414,8 +414,7 @@ Cesta čez prelaz Vršič je zaradi zimskih razmer zaprta.
 MODEL-OUTPUT:
 Podatki o prometu.
 Na primorski avtocesti proti Ljubljani je zaradi pokvarjenega vozila promet oviran med priključkoma Črni Kal in Kastelec.
-Zaradi del bo na primorski avtocesti proti Kopru jutri in v nedeljo od 7-ih do 17-ih zaprt prehitevalni pas med Brezovico in Vrhniko. Promet bo potekal le po enem pasu.
-Prav tako zaradi del bo jutri od 12-ih do 20-ih zaprt vozni pas med Postojno in Razdrtim proti Kopru.
+Na dolenjski avtocesti proti Obrežju je zaradi pokvarjenega tovornjaka promet oviran med priključkoma Ivančna Gorica in Bič.
 
 
 ================================================================================
@@ -501,7 +500,8 @@ MODEL-OUTPUT:
 Podatki o prometu.
 Zaradi del je krajši zastoj na vzhodni mariborski obvoznici med priključkom Maribor-center in predorom Malečnik proti Šentilju.
 Gost promet z zastoji je tudi na cestah Šmarje-Koper in Lesce-Bled.
-Na primorski avtocesti proti Kopru je zaradi pokvarjenega tovornjaka zaprt pas za počasna vozila med Vrhniko in Logatcem.
+Regionalna cesta Kozina-Starod je zaradi nesreče zaprta pri Podgradu.
+Na gorenjski avtocesti proti Ljubljani je zaradi del zaprt priključek Jesenice-vzhod.
 
 
 ================================================================================
@@ -589,7 +589,7 @@ Na severni ljubljanski obvoznici bodo zaradi del predvidoma ob polnoči in ob po
 
 MODEL-OUTPUT:
 Podatki o prometu.
-Na dolenjski avtocesti proti Obrežju je zaradi pokvarjenega tovornjaka promet oviran med priključkoma Krško in Brežice.
+Na dolenjski avtocesti proti Obrežju je zaradi pokvarjenega tovornjaka promet oviran med priključkoma Drnovo in Čatež.
 Na primorski avtocesti proti Kopru je zaradi del zaprt vozni pas med priključkoma Črni Kal in Kozina.
 Prav tako zaradi del je na štajerski avtocesti proti Mariboru zaprt vozni pas med priključkoma Celje-zahod in Celje-center.
 
@@ -847,7 +847,6 @@ MODEL-OUTPUT:
 Podatki o prometu.
 Na štajerski avtocesti proti Ljubljani je zaradi del nastal krajši zastoj med priključkoma Celje-zahod in Celje-center.
 Zaradi burje je na vipavski hitri cesti med razcepom Nanos in priključkom Ajdovščina prepovedan promet za hladilnike in vozila s ponjavami, lažja od 8 ton.
-Na mejnem prehodu Gruškovje vozniki tovornih vozil na vstop v državo čakajo uro in pol.
 
 
 ================================================================================
@@ -911,7 +910,7 @@ Na štajerski avtocesti proti Ljubljani je zaradi pokvarjenega avtobusa oviran p
 
 MODEL-OUTPUT:
 Podatki o prometu.
-Na primorski avtocesti proti Ljubljani bo zaradi del med Postojno in Uncem promet do 16-ih potekal le po enem prometnem pasu.
+Na primorski avtocesti proti Kopru bo zaradi del med Postojno in Razdrtim promet od 13-ih do 18-ih potekal le po enem prometnem pasu.
 Prav tako zaradi del bo cesta Vrhnika-Horjul od 7-ih do 19-ih zaprta med Veliko Ligojno in Horjulom.
 
 
@@ -970,7 +969,8 @@ Na mejnih prehodih Obrežje in Slovenska vas vozniki osebnih vozil pri vstopu v 
 
 MODEL-OUTPUT:
 Podatki o prometu.
-Na štajerski avtocesti proti Ljubljani je zaradi del nastal krajši zastoj med priključkoma Celje-center in Celje-zahod. Opozarjamo na nevarnost naleta.
+Na primorski avtocesti proti Kopru je zaradi del zaprt vozni pas med priključkoma Kozina in Kastelec.
+Prav tako zaradi del je na gorenjski avtocesti promet med priključkoma Lesce in Brezje urejen dvosmerno po polovici avtoceste. Zaprt je tudi izvoz Brezje proti Ljubljani.
 Na mejnem prehodu Obrežje vozniki tovornih vozil na vstop v državo čakajo več kot 2 uri, v Gruškovju pa do 1 uro.
 
 
@@ -1058,7 +1058,7 @@ Zaradi pokvarjenih vozil je promet oviran na štajerski avtocesti med Lukovico i
 MODEL-OUTPUT:
 Podatki o prometu.
 Na štajerski avtocesti proti Mariboru je zaradi pokvarjenega vozila promet oviran med priključkoma Celje-center in Celje-vzhod.
-Zaradi del je na dolenjski avtocesti proti Ljubljani zaprt vozni pas med priključkoma Trebnje-zahod in Bič.
+Zaradi del je na dolenjski avtocesti proti Obrežju zaprt vozni pas med Grosupljim in Višnjo Goro.
 
 
 ================================================================================
@@ -1109,7 +1109,8 @@ MODEL-OUTPUT:
 Podatki o prometu.
 Na vzhodni ljubljanski obvoznici je zaradi del krajši zastoj med Bizovikom in predorom Golovec proti Dolenjski.
 Na primorski avtocesti je zaradi del zaprt prehitevalni pas med priključkoma Bertoki in Črni Kal v predoru Dekani proti Ljubljani.
-Prav tako zaradi del je na štajerski avtocesti proti Mariboru zaprt vozni pas med priključkoma Trojane in Vransko.
+Zaradi del je na štajerski avtocesti proti Mariboru zaprt vozni pas med Trojanami in Vranskim pred predorom Jasovnik.
+Na gorenjski avtocesti je prav tako zaradi del zaprt vozni pas med priključkoma Jesenice-vzhod in Hrušica proti Avstriji.
 
 
 ================================================================================
@@ -1145,8 +1146,8 @@ Pokvarjen tovornjak je obtičal tudi na vzhodni mariborski obvoznici na izvozu M
 MODEL-OUTPUT:
 Podatki o prometu.
 Na gorenjski avtocesti proti Avstriji je zaradi pokvarjenega vozila zaprt predor Karavanke.
-Na vzhodni mariborski obvoznici proti Ljubljani je zaradi pokvarjenega vozila oviran promet na izvozu Maribor-center.
-Zaradi del bo predvidoma do 16-ih promet skozi predor Karavanke potekal izmenično enosmerno.
+Na štajerski avtocesti proti Mariboru je zaradi del zaprt vozni pas med Trojanami in Vranskim v predoru Jasovnik.
+Prav tako zaradi del bo predvidoma do 16-ih promet skozi predor Karavanke potekal izmenično enosmerno.
 
 
 ================================================================================
@@ -1169,7 +1170,7 @@ Na mejnem prehodu Obrežje vozniki tovornih vozil na vstop v Slovenijo čakajo d
 MODEL-OUTPUT:
 Podatki o prometu.
 Na primorski avtocesti proti Kopru je zaradi pokvarjenega tovornjaka zaprt pas za počasna vozila med Vrhniko in Logatcem.
-Na mejnem prehodu Obrežje vozniki tovornih vozil na vstop v Slovenijo čakajo več kot 2 uri, v Gruškovju pa eno uro.
+Na mejnem prehodu Obrežje vozniki tovornih vozil na vstop v Slovenijo čakajo 1 uro, v Gruškovju pa pol ure.
 
 
 ================================================================================
@@ -1200,7 +1201,7 @@ Prav tako zaradi del je cesta Postojna-Rakov Škocjan zaprta pri Ravbarkomandi.
 MODEL-OUTPUT:
 Podatki o prometu.
 Na primorski avtocesti proti Kopru je zaradi pokvarjenega tovornjaka zaprt pas za počasna vozila med priključkoma Vrhnika in Logatec.
-Zaradi del je promet na gorenjski avtocesti med priključkoma Lesce in Podtabor urejen dvosmerno po polovici avtoceste. Proti Ljubljani je zaprt tudi izvoz Brezje.
+Zaradi del je promet na gorenjski avtocesti med priključkoma Lesce in Podtabor urejen dvosmerno po polovici avtoceste. Proti Ljubljani je zaprt tudi izvoz Brezje. Občasno na tem odseku nastane zastoj.
 
 
 ================================================================================
@@ -1225,8 +1226,8 @@ Na regionalni cesti Zagórje-Podkúm je zaradi zemeljskega plazu promet urejen i
 
 MODEL-OUTPUT:
 Podatki o prometu.
-Na primorski avtocesti proti Ljubljani je zaradi pokvarjenega tovornjaka zaprt pas za počasna vozila med Vrhniko in Logatcem.
-Zaradi del je na primorski avtocesti zaprt izvoz Vrhnika proti Ljubljani. Obvoz je prek priključka Logatec.
+Na primorski avtocesti proti Ljubljani je zaradi del zaprt izvoz Vrhnika. Obvoz je prek priključka Logatec.
+Prav tako zaradi del je na štajerski avtocesti proti Mariboru zaprt vozni pas med priključkoma Celje-zahod in Celje-center.
 
 
 ================================================================================
@@ -1433,7 +1434,6 @@ MODEL-OUTPUT:
 Podatki o prometu.
 Na dolenjski avtocesti proti Ljubljani je zaradi pokvarjenega vozila promet oviran med priključkoma Višnja Gora in Grosuplje-vzhod.
 Cesta čez prelaz Vršič je zaprta zaradi plazu.
-V nočeh na jutri in na sredo bo od 20-ih do 5-ih zjutraj promet skozi predor Karavanke potekal izmenično enosmerno.
 
 
 ================================================================================
@@ -1460,6 +1460,7 @@ Cesta čez prelaz Vršič je prevozna samo za osebna vozila z verigami.
 MODEL-OUTPUT:
 Podatki o prometu.
 Na primorski avtocesti proti Kopru je zaradi pokvarjenega tovornjaka zaprt pas za počasna vozila med Vrhniko in Logatcem.
+Na dolenjski avtocesti proti Ljubljani je zaradi del zaprt vozni pas med priključkoma Trebnje-zahod in Bič.
 
 
 ================================================================================
@@ -1494,7 +1495,7 @@ Jutri od 17-ih do nedelje do 17-ih bo zaradi del zaprta regionalna cesta Ivančn
 MODEL-OUTPUT:
 Podatki o prometu.
 Na primorski avtocesti proti Kopru je zaradi pokvarjenega tovornjaka zaprt pas za počasna vozila med Vrhniko in Logatcem.
-Na dolenjski avtocesti proti Ljubljani je zaradi pokvarjenega vozila promet oviran med priključkoma Bič in Ivančna Gorica.
+Na dolenjski avtocesti proti Ljubljani je zaradi pokvarjenega vozila oviran promet med priključkoma Bič in Ivančna Gorica.
 
 
 ================================================================================
@@ -1526,7 +1527,6 @@ MODEL-OUTPUT:
 Podatki o prometu.
 Ponekod po državi je zaradi megle v pasovih zmanjšana vidljivost.
 Zaradi del je na gorenjski avtocesti proti Ljubljani zaprt vozni pas med priključkoma Lesce in Brezje.
-Na mejnih prehodih Obrežje in Gruškovje vozniki osebnih vozil na izstop iz države čakajo do pol ure.
 
 
 ================================================================================
@@ -1847,9 +1847,7 @@ Regionalna cesta Kamnik-Domžale je prav tako zaradi nesreče zaprta v Šmarci.
 
 MODEL-OUTPUT:
 Podatki o prometu.
-Na primorski avtocesti proti Ljubljani je zaradi nesreče zaprt vozni pas med priključkom Senožeče in razcepom Gabrk.
-Prav tako zaradi nesreče je zaprta cesta Kamnik-Domžale v Šmarci.
-Na štajerski avtocesti proti Ljubljani je zaradi pokvarjenega vozila promet oviran med priključkoma Celje-zahod in Celje-center.
+Na primorski avtocesti proti Ljubljani je zaradi nesreče zaprt prehitevalni pas med priključkoma Logatec in Vrhnika. Nastal je zastoj. Čas potovanja se podaljša za približno 20 minut.
 
 
 ================================================================================
@@ -1880,7 +1878,8 @@ Zaradi športne prireditve je v Ljubljani  zvečer pričakovati povečan promet 
 MODEL-OUTPUT:
 Podatki o prometu.
 Na gorenjski avtocesti proti Karavankam je zaradi prometne nesreče oviran promet pred počivališčem Povodje.
-Na dolenjski avtocesti proti Obrežju je med priključkoma Ivančna Gorica in Bič zastoj tovornih vozil.
+Na dolenjski avtocesti proti Obrežju je med priključkoma Brežice in Obrežje zastoj tovornih vozil.
+Na mejnem prehodu Obrežje vozniki tovornih vozil na vstop v državo čakajo več kot 2 uri, v Gruškovju pa do 1 uro.
 
 
 ================================================================================
@@ -1936,7 +1935,6 @@ MODEL-OUTPUT:
 Podatki o prometu.
 Na primorski avtocesti proti Ljubljani je zaradi del zaprt vozni pas med Uncem in Logatcem. Nastal je zastoj. Čas potovanja se podaljša za približno 20 minut.
 Vipavska hitra cesta proti Italiji bo zaradi del zaprta med priključkoma Ajdovščina in Selo predvidoma do jutri do 5-ih zjutraj. Obvoz je po vzporedni regionalni cesti.
-Cesta čez prelaz Vršič je prevozna samo za osebna vozila z verigami.
 
 
 ================================================================================
@@ -2032,7 +2030,8 @@ Na dolenjski avtocesti je zaradi pokvarjenih vozil promet oviran med priključko
 
 MODEL-OUTPUT:
 Podatki o prometu.
-Zaradi del je na južni ljubljanski obvoznici zaprt prehitevalni pas med priključkoma Rudnik in Center proti Primorski. Nastal je krajši zastoj.
+Zaradi del je na južni ljubljanski obvoznici proti Primorski zaprt vozni pas med priključkoma Rudnik in Center. Nastal je krajši zastoj, ki sega do razcepa Malence.
+Na štajerski avtocesti proti Ljubljani je zaradi pokvarjenega vozila promet oviran med priključkoma Celje-center in Celje-zahod.
 
 
 ================================================================================
@@ -2287,7 +2286,8 @@ Na zahodni ljubljanski obvoznici so odstranili posledice nesreče med razcepom K
 
 MODEL-OUTPUT:
 Podatki o prometu.
-Na dolenjski avtocesti proti Ljubljani je zaradi pokvarjenega tovornjaka promet oviran med predoroma Mali Vrh in Debeli hrib.
+Zaradi pokvarjenega vozila je na dolenjski avtocesti proti Ljubljani promet oviran med priključkoma Grosuplje-vzhod in Grosuplje-zahod.
+Na primorski avtocesti proti Ljubljani je zaradi del zaprt vozni pas med priključkoma Bertoki in Črni Kal v predoru Dekani.
 
 
 ================================================================================
@@ -2314,7 +2314,7 @@ Na glavni cesti Nova Gorica-Tolmin so odstranili posledice nesreče med Solkanom
 MODEL-OUTPUT:
 Podatki o prometu.
 Na štajerski avtocesti proti Mariboru je zaradi pokvarjenega vozila promet oviran med priključkoma Slovenske Konjice in Slovenska Bistrica-jug.
-Zaradi del bo promet skozi predor Karavanke od 8-ih do 16-ih potekal izmenično enosmerno.
+Na gorenjski avtocesti proti Karavankam je zaradi del zaprt vozni pas med priključkoma Jesenice-vzhod in Hrušica.
 
 
 ================================================================================
@@ -2434,9 +2434,9 @@ Pred predorom Karavanke je kilometer dolg zastoj tovornih vozil proti Avstriji.
 
 MODEL-OUTPUT:
 Podatki o prometu.
-Zaradi del je krajši zastoj na južni ljubljanski obvoznici med razcepom Malence in priključkom Center proti Primorski.
+Zaradi del je zastoj na južni ljubljanski obvoznici med razcepom Malence in priključkom Ljubljana-center proti Primorski.
 Na pomurski avtocesti proti Mariboru je zaradi nesreče zaprt prehitevalni pas med priključkoma Vučja vas in Sveti Jurij ob Ščavnici.
-Na gorenjski avtocesti proti Ljubljani bo zaradi del od 20-ih do jutri do 5-ih zjutraj zaprt predor Šentvid. Obvoz bo po Celovški cesti.
+Na gorenjski avtocesti proti Ljubljani je zaradi del v predoru Šentvid zaprt izvoz na Celovško cesto.
 
 
 ================================================================================
@@ -2681,7 +2681,7 @@ Prav tako zaradi nesreče je na glavni cesti Ravne-Dravograd promet urejen izmen
 
 MODEL-OUTPUT:
 Podatki o prometu.
-Na gorenjski avtocesti je pred predorom Karavanke približno 2 kilometra dolg zastoj proti Avstriji.
+Na gorenjski avtocesti je pred predorom Karavanke proti Avstriji približno 2 kilometra dolg zastoj.
 Zastoji so tudi na cestah Logatec-Vrhnika, Lucija-Strunjan, Šmarje-Koper in Lesce-Bled.
 Na glavni cesti Dravograd-Ravne je zaradi nesreče promet pri Ravnah urejen izmenično enosmerno.
 
@@ -3165,26 +3165,26 @@ Podatki o prometu.
 Na štajerski avtocesti proti Mariboru je zaradi pokvarjenega tovornega vozila zaprt pas za počasna vozila med Blagovico in Trojanami pred predorom Podmilj.
 Zaradi poplav zemeljskih plazov so zaprte številne državne ceste, predvsem na Štajerskem, Koroškem, Gorenjskem in severnem Primorskem.
 Med drugimi so zaprte ceste:
--       Maribor-Dravograd,
--       Dravograd-Slovenj Gradec,
--       Celje-Laško-Radeče,
--       Ljubljana-Litija-Zagorje-Hrastnik-Zidani Most,
--       Hrastnik-Marno-Rimske Toplice,
--       Dobrova-Polhov Gradec-Ljubljanica in
--       Begunje-Tržič.
+-	Maribor-Dravograd,
+-	Dravograd-Slovenj Gradec,
+-	Celje-Laško-Radeče,
+-	Ljubljana-Litija-Zagorje-Hrastnik-Zidani Most,
+-	Hrastnik-Marno-Rimske Toplice,
+-	Dobrova-Polhov Gradec-Ljubljanica in
+-	Begunje-Tržič.
 Vozišče je zaprto tudi na cestah od Mežice in od Šoštanja proti Črni na Koroškem ter od Kamnika proti Kamniški Bistrici in proti Gornjemu Gradu.
 
 MODEL-OUTPUT:
 Podatki o prometu.
-Zaradi poplav so med drugimi zaprte ceste:
--       Maribor - Dravograd,
--       Dravograd - Slovenj Gradec,
--       Celje - Laško - Radeče,
--       Ljubno - Solčava,
--       Ljubljana - Litija - Zagorje - Hrastnik - Zidani Most,
--       Hrastnik - Marno - Rimske Toplice,
--       Begunje - Tržič in
--       od Kamnika proti Kamniški Bistrici.
+Zaradi poplav so zaprte številne ceste na severnem Primorskem, Koroškem, Štajerskem, v Zasavju in v Osrednji Sloveniji.
+Med drugimi so zaprte ceste:
+-	Maribor-Dravograd,
+-	Dravograd-Slovenj Gradec,
+-	Celje-Laško-Radeče,
+-	Ljubno-Solčava,
+-	Begunje-Tržič,
+-	Ljubljana-Litija-Zagorje-Hrastnik-Zidani Most in
+-	od Kamnika proti Kamniški Bistrici.
 
 
 ================================================================================
@@ -3242,7 +3242,7 @@ Na mejnih prehodih Gruškovje in Obrežje je povečan promet tovornih vozil pri 
 MODEL-OUTPUT:
 Podatki o prometu.
 Na štajerski avtocesti proti Mariboru je zaradi predmeta na vozišču oviran promet med priključkoma Domžale in Blagovica.
-Na mejnih prehodih Gruškovje in Obrežje vozniki tovornih vozil na vstop v državo čakajo približno 1 uro.
+Na mejnih prehodih Obrežje in Gruškovje vozniki tovornih vozil na vstop v državo čakajo približno 1 uro.
 
 
 ================================================================================
@@ -3295,7 +3295,7 @@ MODEL-OUTPUT:
 Podatki o prometu.
 Na južni ljubljanski obvoznici sta zaradi prometne nesreče na razcepu Kozarje zaprta vozni in prehitevalni pas iz smeri Viča proti Brezovici.
 Cesta Vrhnika-Horjul-Šentjošt nad Horjulom je zaradi zemeljskega plazu zaprta pri Vrzdêncu. Obvoz je prek Polhovega Gradca.
-Cesta čez prelaz Vršič je zaprta zaradi zimskih razmer.
+Ponekod po državi je zaradi megle zmanjšana vidljivost.
 
 
 ================================================================================
@@ -3515,7 +3515,7 @@ Na severni ljubljanski obvoznici pa je zaprt razcep Koseze iz smeri Šiške prot
 
 MODEL-OUTPUT:
 Podatki o prometu.
-Na štajerski avtocesti je zaradi pokvarjenega vozila oviran promet med Blagovico in Trojanami pred predorom Podmilj proti Mariboru.
+Na štajerski avtocesti je zaradi pokvarjenega vozila oviran promet med Trojanami in Vranskim pred predorom Podmilj proti Mariboru.
 Zaradi del je na primorski avtocesti zaprt vozni pas med priključkoma Kozina in Divača proti Ljubljani.
 
 
@@ -3622,8 +3622,9 @@ Zastoji so še na cestah Lesce-Bled, Dragonja-Šmarje-Koper in Parecag-Izola.
 
 MODEL-OUTPUT:
 Podatki o prometu.
-Na mariborski vzhodni obvoznici je zaradi del zastoj med priključkom Maribor-center in razcepom Dragučova proti Šentilju.
-Zaradi del je krajši zastoj tudi na gorenjski avtocesti med priključkoma Jesenice-vzhod in Jesenice-zahod proti Ljubljani.
+Na gorenjski avtocesti je zaradi del krajši zastoj med priključkoma Jesenice-zahod in Jesenice-vzhod proti Ljubljani.
+Zaradi del je krajši zastoj tudi na mariborski vzhodni obvoznici med razcepom Dragučova in priključkom Maribor-center proti Ljubljani.
+Na primorski avtocesti je zaradi pokvarjenega vozila oviran promet med Vrhniko in Brezovico proti Ljubljani.
 
 
 ================================================================================
@@ -3655,8 +3656,7 @@ Na južni ljubljanski obvoznici promet ni več oviran zaradi nesreče med priklj
 MODEL-OUTPUT:
 Podatki o prometu.
 Na štajerski avtocesti proti Mariboru je zaradi prometne nesreče zaprt prehitevalni pas pred priključkom Šentjakob. Nastal je zastoj, ki sega do razcepa Zadobrova.
-Na primorski avtocesti proti Ljubljani je zaradi predmeta na vozišču promet oviran pred priključkom Kastelec.
-Na obalni hitri cesti je zaradi del zaprt prehitevalni pas med priključkoma Bertoki in Koper-center proti Ljubljani.
+Na primorski avtocesti proti Ljubljani je zaradi predmeta na vozišču oviran promet pred priključkom Kastelec.
 
 
 ================================================================================
@@ -3689,8 +3689,7 @@ Na štajerski avtocesti proti Mariboru pa promet med Blagovico in Krtino poteka 
 MODEL-OUTPUT:
 Podatki o prometu.
 Na štajerski avtocesti proti Ljubljani je zaradi pokvarjenega vozila zaprt pas za počasna vozila med Framom in Slovensko Bistrico.
-Zaradi del je zaprta cesta Nova vas - Pišece pri Brezovici.
-Prav tako zaradi del je na štajerski avtocesti proti Mariboru zaprt prehitevalni pas med Blagovico in Trojanami v predoru Podmilj.
+Zaradi del je zaprta cesta Nova vas-Pišece pri Brezovici.
 
 
 ================================================================================
@@ -3748,7 +3747,7 @@ Pokvarjeno vozilo ovira promet na štajerski avtocesti med Domžalami in Šentja
 
 MODEL-OUTPUT:
 Podatki o prometu.
-Na štajerski avtocesti proti Ljubljani je zaradi pokvarjenega vozila promet oviran med priključkoma Domžale in Šentjakob.
+Na štajerski avtocesti proti Mariboru je zaradi pokvarjenega vozila promet oviran med priključkoma Domžale in Šentjakob.
 Zaradi del je na dolenjski avtocesti proti Obrežju zaprt vozni pas med priključkoma Grosuplje-vzhod in Višnja Gora.
 
 
@@ -3773,8 +3772,8 @@ Na mejnih prehodih Obrežje in Gruškovje vozniki tovornih vozil na vstop v Slov
 
 MODEL-OUTPUT:
 Podatki o prometu.
-Na primorski avtocesti proti Kopru je zaradi pokvarjenega tovornjaka zaprt pas za počasna vozila med priključkoma Vrhnika in Logatec.
-Na mejnem prehodu Obrežje vozniki tovornih vozil na vstop v Slovenijo čakajo do 1 uro.
+Na primorski avtocesti proti Kopru je zaradi pokvarjenega tovornjaka zaprt pas za počasna vozila med Vrhniko in Logatcem.
+Zaradi del je zaprta regionalna cesta Javornik - Gôrje pri Gorjah. Obvoz je po cesti Bled - Lesce - Žirovnica - Javornik - Lipce.
 
 
 ================================================================================
@@ -3916,7 +3915,7 @@ Na gorenjski avtocesti proti Karavankam je zaradi del zaprt priključek Brod. Ob
 
 MODEL-OUTPUT:
 Podatki o prometu.
-Na štajerski avtocesti proti Ljubljani je zaradi pokvarjenega vozila promet oviran med priključkoma Celje-center in Celje-zahod.
+Na štajerski avtocesti proti Ljubljani je zaradi pokvarjenega vozila promet oviran med priključkoma Vransko in Trojane.
 Na gorenjski avtocesti proti Avstriji je zaradi del zaprt priključek Brod.
 
 
@@ -3965,7 +3964,8 @@ MODEL-OUTPUT:
 Podatki o prometu.
 Na primorski avtocesti proti Kopru je zaradi del krajši zastoj med Brezovico in Vrhniko. Čas vožnje se podaljša za približno 10 minut.
 Zaradi del je krajši zastoj tudi na zahodni ljubljanski obvoznici med razcepom Kozarje in priključkom Brdo proti Kranju.
-Štajerska avtocesta proti Mariboru bo do jutri do 6-ih zjutraj zaradi del zaprta med Blagovico in Vranskim. Zaprta sta tudi uvoz Blagovica v obe smeri ter uvoz Slovenska Bistrica-jug proti Mariboru.
+Štajerska avtocesta proti Mariboru bo do jutri do 6-ih zjutraj zaradi del zaprta med Blagovico in Vranskim. Zaprta sta tudi uvoz Trojane v obe smeri ter uvoz Slovenska Bistrica-jug proti Mariboru.
 
 
 ================================================================================
+
