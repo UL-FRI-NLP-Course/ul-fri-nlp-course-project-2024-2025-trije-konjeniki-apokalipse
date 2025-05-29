@@ -4,7 +4,7 @@ from sentence_transformers import SentenceTransformer
 
 # 1) load docs
 docs = []
-with open("docs.jsonl","r",encoding="utf-8") as f:
+with open("rag_roads.jsonl","r",encoding="utf-8") as f: # or rag_instructions.jsonl
     for ln in f:
         obj = json.loads(ln)
         docs.append(obj["text"])
@@ -13,12 +13,7 @@ with open("docs.jsonl","r",encoding="utf-8") as f:
 embedder = SentenceTransformer("sentence-transformers/LaBSE")
 embs = embedder.encode(docs, convert_to_numpy=True, show_progress_bar=True)
 
-# 3) save both to disk
-np.save("doc_embeddings.npy", embs)     # shape (N, D)
-with open("docs.jsonl","r",encoding="utf-8") as src, open("docs.txt","w",encoding="utf-8") as out:
-    # also write a plain text file so retrieval script can re-load quickly
-    for ln in src:
-        text = json.loads(ln)["text"]
-        out.write(text.replace("\n"," ")+"\n")
+# 3) save to disk
+np.save("rag_roads_embeddings.npy", embs)     # shape (N, D)   # or rag_instructions_embeddings.npy
 
-print(f"✅ saved {len(docs)} embeddings → doc_embeddings.npy")
+print(f"✅ saved {len(docs)} embeddings!")

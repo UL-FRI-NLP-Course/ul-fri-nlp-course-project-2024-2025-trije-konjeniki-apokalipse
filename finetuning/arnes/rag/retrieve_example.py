@@ -1,27 +1,41 @@
+import json
 import numpy as np
 from sentence_transformers import SentenceTransformer
 
-# 1) load precomputed embeddings + docs
-embs = np.load("doc_embeddings.npy")      # (N, D)
-with open("docs.txt","r",encoding="utf-8") as f:
-    docs = [ln.strip() for ln in f]
-assert len(docs)==embs.shape[0]
+# 1) Load instruction embeddings + JSONL
+inst_embs = np.load("rag_instructions_embeddings.npy")    # (M, D)
+inst_docs = []
+with open("rag_instructions.jsonl", "r", encoding="utf-8") as f:
+    for ln in f:
+        inst_docs.append(json.loads(ln)["text"])
+assert len(inst_docs) == inst_embs.shape[0]
 
-# 2) init embedder
+# 2) Load roads embeddings + JSONL
+roads_embs = np.load("rag_roads_embeddings.npy")          # (N, D)
+roads_docs = []
+with open("rag_roads.jsonl", "r", encoding="utf-8") as f:
+    for ln in f:
+        roads_docs.append(json.loads(ln)["text"])
+assert len(roads_docs) == roads_embs.shape[0]
+
+# 3) Init the encoder
 embedder = SentenceTransformer("sentence-transformers/LaBSE")
 
-def topk(query: str, k: int = 3):
-    # a) embed query
+def top1(query: str, embs: np.ndarray, docs: list[str]):
     q_emb = embedder.encode([query], convert_to_numpy=True)  # (1, D)
+    sims = (embs @ q_emb.T).squeeze(1)                        # (K,)
+    idx = int(np.argmax(sims))
+    return idx, float(sims[idx]), docs[idx]
 
-    # b) compute similarity (dot product)
-    sims = (embs @ q_emb.T).squeeze(1)   # shape (N,)
+if __name__ == "__main__":
+    q = "Kako se imenuje južna veja ljubljanske obvoznice?"  # sample query
 
-    # c) pick top-k indices
-    idxs = np.argsort(-sims)[:k]
-    return [(i, float(sims[i]), docs[i]) for i in idxs]
+    # retrieve top-1 from instructions
+    i_idx, i_score, i_text = top1(q, inst_embs, inst_docs)
+    print("→ Instruction hit:")
+    print(f"  [{i_idx}] (score={i_score:.4f}) {i_text}\n")
 
-if __name__=="__main__":
-    q = "Ali je primorska avtocesta zaprta zaradi okvare?"
-    for rank, (idx, score, text) in enumerate(topk(q, 3), 1):
-        print(f"{rank}. doc#{idx}  score={score:.4f}\n   ▶ {text}\n")
+    # retrieve top-1 from roads
+    r_idx, r_score, r_text = top1(q, roads_embs, roads_docs)
+    print("→ Road-segment hit:")
+    print(f"  [{r_idx}] (score={r_score:.4f}) {r_text}")
