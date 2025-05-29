@@ -1,0 +1,7 @@
+Download from https://download.geofabrik.de/europe/slovenia.html
+
+Use this if we want to filter over main roads
+docker run --rm -v %cd%:/data stefda/osmium-tool osmium tags-filter /data/slovenia-latest.osm.pbf w/highway=motorway w/highway=trunk w/highway=primary w/highway=secondary -o /data/main_roads.osm.pbf
+
+Convert to .osm for usage
+docker run --rm -v %cd%:/data stefda/osmium-tool osmium cat /data/main_roads.osm.pbf -o /data/main_roads.osm
