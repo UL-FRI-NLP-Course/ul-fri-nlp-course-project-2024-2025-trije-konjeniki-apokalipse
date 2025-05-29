@@ -17,7 +17,7 @@ def extract_node_data(graph: nx.MultiDiGraph):
             "id": str(node_id),
             "lat": data["y"],
             "lng": data["x"],
-            "name": f"Intersection at ({round(data['y'], 5)}, {round(data['x'], 5)})",
+            "name": f"Križišče na ({round(data['y'], 5)}, {round(data['x'], 5)})",
             "connected_roads": set()
         }
     return nodes
@@ -89,8 +89,8 @@ def convert_to_rag_chunks(roads, nodes, road_name_by_id):
         connected = list(from_roads.union(to_roads))
 
         chunk_text = (
-            f"{road['name']} runs from {from_node['name']} to {to_node['name']}. "
-            f"It connects to roads like {', '.join(connected[:5])}."
+            f"{road['name']} pelje od {from_node['name']} do {to_node['name']}. "
+            f"Povezuje se s cestami: {', '.join(connected[:5])}."
         )
 
         chunks.append({
