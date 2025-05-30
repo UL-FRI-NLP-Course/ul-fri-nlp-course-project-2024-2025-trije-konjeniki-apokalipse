@@ -2,50 +2,115 @@
 
 ---
 
-## TEAM MEMBERS
-- Janez Tomšič
-- Žan Pušenjak
-- Matic Zadobovšek
+## Team members  
+- **Janez Tomšič**  
+- **Žan Pušenjak**  
+- **Matic Zadobovšek**  
 
 ---
 
-## PROJECT DESCRIPTION
-
-This project focuses on *automatic generation of Slovenian traffic news* using Natural Language Processing (NLP) techniques. The goal is to develop a system that transforms raw traffic data from promet.si into structured news reports that follow the predefined format used in radio broadcasting. This will reduce the manual workload for editors while also maintaining consistency and accuracy in traffic reports.
-
-To achieve this, we explore *pre-trained language models*, *structured prompting*, and *fine-tuning*.
+## 📑 Table of contents
+- [Project structure](#-project-structure)
 
 ---
 
-## PROJECT STRUCTURE
-- **data/RTVSlo/** ... provided dataset we are working with
-  - **Podatki - rtvslo.si** ... rtf files
-    - **Promet 2022**
-      - *Januar 2022*
-      - ...
-      - *December 2022*
-    - **Promet 2023**
-    - **Promet 2024**
-  - *Podatki - PrometnoPorocilo_2022_2023_2024.xlsx* ... Excel file with data from promet.si website
-  - *PROMET, osnove.docx* ... instructions (shorter)
-  - *PROMET.docx* ... instructions (detailed)
-- **notebooks/**
-  - *exploration.ipynb* ... Jupyter notebook for easier exploration of given data
-- **report/**
-  - *project_submission_1.pdf* ... report of the *first submission*
-- *environment.yml* ... Conda environment configuration
 
----
+## 📂 Project structure
 
-## INSTALLATION & SETUP
-
-To have a reproducible environment, we use Conda. Install dependencies using the provided ```environment.yml```:
+Below is an overview of the repository layout.
 
 ```
-conda env create -f environment.yml
-conda activate nlp-project
+.
+├── report/
+├── environment.yml
+├── src/
+│   ├── utils/
+│   ├── notebooks/
+│   │   ├── dataset_preparation.ipynb
+│   │   ├── exploration.ipynb
+│   │   ├── evaluation.ipynb
+│   │   ├── finetuning_example.ipynb
+│   │   └── prompting.ipynb
+│   ├── evaluation/
+│   │   ├── app/
+│   │   │   └── app_evaluation.py
+│   │   ├── progress/
+│   │   └── results/
+│   └── arnes_hpc/
+│       ├── archive/
+│       ├── containers/
+│       ├── models/
+│       │   └── final_model_9b/
+│       └── scripts/
+│           ├── finetuning.py
+│           ├── instructions.txt
+│           ├── run_base_model.py
+│           ├── run_finetuned_model.py
+│           ├── run_instructed_finetuned_model.py
+│           ├── run_rag_model.py
+│           ├── run_slurm_finetuning.sh
+│           ├── run_slurm_base_eval.sh
+│           ├── run_slurm_finetuned_eval.sh
+│           ├── run_slurm_instructed_eval.sh
+│           └── run_slurm_rag_eval.sh
+│           └── rag/
+│               ├── data_creation/
+│               ├── embed.py
+│               ├── rag_instructions_embeddings.npy
+│               ├── rag_instructions.jsonl
+│               ├── rag_roads_embeddings.npy
+│               ├── rag_roads.jsonl
+│               └── retrieve_example.py
+└── README.md
 ```
 
-Once the environment is set up, you can explore and run code inside the **notebooks/** directory.
+---
 
+### 📁 `report/`  
+PDFs of our project write-ups and submission reports.
 
+---
+
+### 📄 `environment.yml`  
+Conda environment for local reproducibility (`conda env create -f environment.yml`).
+
+---
+
+### 📂 `src/utils/`  
+Helper functions for parsing, cleaning and structuring raw traffic data.
+
+---
+
+### 📂 `src/notebooks/`  
+Interactive Jupyter notebooks for:  
+- **dataset_preparation.ipynb** — building and cleaning our dataset 
+- **exploration.ipynb** — data inspection and exploratory data analysis  
+- **evaluation.ipynb** — automatic metrics (SloBERTa score) 
+- **finetuning_example.ipynb** — a toy LoRA run to run on Colab  
+- **prompting.ipynb** — structured-prompt experiments  
+
+---
+
+### 📂 `src/evaluation/`  
+#### `app/`  
+A Streamlit app (`app_evaluation.py`) we built to perform manual rating on test outputs.  
+#### `progress/`  
+Each member’s intermediate ratings.  
+#### `results/`  
+Final aggregated outputs for all **4 scenarios** (base-instructed, fine-tuned, fine-tuned + instructed, fine-tuned + instructed + RAG) on 500 examples.
+
+---
+
+### 📂 `src/arnes_hpc/`  
+Everything needed to run our **full experiments on the ARNES HPC cluster**:
+
+- **archive/**: old / discarded models & scripts  
+- **containers/**: Singularity definition files for building `.sif` images  
+- **models/final_model_9b/**: the GaMS-9B checkpoint & LoRA adapter  
+- **scripts/**:  
+  - **finetuning.py**: QLoRA fine-tuning on H100  
+  - **instructions.txt**: base-prompt rules  
+  - **run_*.py** & **run_slurm_*.sh**: launch scripts for each of the 4 experiments  
+  - **rag/**: embed & index road-chunks & instruction docs with LaBSE + retrieval demo
+
+---
