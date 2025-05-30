@@ -13,6 +13,7 @@
 - [Natural language processing course: `Automatic generation of Slovenian traffic news for RTV Slovenija`](#natural-language-processing-course-automatic-generation-of-slovenian-traffic-news-for-rtv-slovenija)
   - [Team members](#team-members)
   - [📑 Table of contents](#-table-of-contents)
+  - [📖 Introduction](#-introduction)
   - [📂 Project structure](#-project-structure)
     - [📁 `report/`](#-report)
     - [📄 `environment.yml`](#-environmentyml)
@@ -31,8 +32,8 @@
     - [💻 ARNES HPC cluster setup](#-arnes-hpc-cluster-setup)
   - [🧪 Experiments](#-experiments)
     - [1️⃣ Base-instructed (prompting only)](#1️⃣-base-instructed-prompting-only)
-    - [2️⃣ Fine-Tuned](#2️⃣-fine-tuned)
-    - [3️⃣ Fine-Tuned + instructed](#3️⃣-fine-tuned--instructed)
+    - [2️⃣ Fine-tuned](#2️⃣-fine-tuned)
+    - [3️⃣ Fine-tuned + instructed](#3️⃣-fine-tuned--instructed)
     - [4️⃣ Fine-tuned + instructed + RAG](#4️⃣-fine-tuned--instructed--rag)
     - [✅ Evaluation](#-evaluation)
       - [📈 Automatic evaluation](#-automatic-evaluation)
@@ -41,6 +42,18 @@
     - [🔬 Automatic evaluation (SloBERTa cosine similarity)](#-automatic-evaluation-sloberta-cosine-similarity)
     - [👥 Manual evaluation](#-manual-evaluation-1)
     - [📈 F1 score distribution](#-f1-score-distribution)
+---
+
+## 📖 Introduction
+
+This repository documents our project for the Natural Language Processing course. The task was to develop a system for the automatic generation of Slovenian traffic reports based on raw structured data provided. The end goal was to support RTV Slovenija in replacing their current manual process (students writing reports every 30 minutes) with a solution powered by large language models (LLMs).
+
+We explore a variety of techniques — from prompting, to parameter-efficient fine-tuning, and retrieval-augmented generation — in order to automatically generate accurate and nicely structured traffic news reports in Slovenian.
+
+We also designed custom evaluation pipelines (both **manual and automatic**) and built a dedicated **Streamlit app** for effective human evaluation.
+
+🔍 **For a deeper dive into data cleaning, methodology, modeling choices, and full results/discussion — please refer to our final project report in the [`report/`](./report/) folder.**
+
 ---
 
 
@@ -245,7 +258,7 @@ We used the original `cjvt/GaMS-9B-Instruct` model with structured prompting. Th
 
 ---
 
-### 2️⃣ Fine-Tuned
+### 2️⃣ Fine-tuned
 
 We performed **QLoRA** fine-tuning of the `cjvt/GaMS-9B-Instruct` model using our processed `train_promet.jsonl` dataset. The dataset was split 80/20 for training and validation.
 
@@ -264,7 +277,7 @@ The adapter and tokenizer were saved to disk for later inference.
 
 ---
 
-### 3️⃣ Fine-Tuned + instructed
+### 3️⃣ Fine-tuned + instructed
 
 We used the fine-tuned model, but kept the structured prompts to guide generation, essentially combining both approaches.
 
