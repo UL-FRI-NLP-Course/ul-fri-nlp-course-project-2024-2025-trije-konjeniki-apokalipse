@@ -10,13 +10,33 @@
 ---
 
 ## 📑 Table of contents
-- [📂 Project structure](#-project-structure)
-- [📊 Data](#-data)
-- [Reproducibility](#-reproducibility)
-  - [Local setup with Conda](#local-setup-with-conda)
-  - [📓 Notebooks](#-notebooks)
-  - [🌐 Streamlit app](#-streamlit-app)
-  - [💻 ARNES HPC cluster setup](#-arnes-hpc-cluster-setup)
+- [Natural language processing course: `Automatic generation of Slovenian traffic news for RTV Slovenija`](#natural-language-processing-course-automatic-generation-of-slovenian-traffic-news-for-rtv-slovenija)
+  - [Team members](#team-members)
+  - [📑 Table of contents](#-table-of-contents)
+  - [📂 Project structure](#-project-structure)
+    - [📁 `report/`](#-report)
+    - [📄 `environment.yml`](#-environmentyml)
+    - [📂 `src/utils/`](#-srcutils)
+    - [📂 `src/notebooks/`](#-srcnotebooks)
+    - [📂 `src/evaluation/`](#-srcevaluation)
+      - [`app/`](#app)
+      - [`progress/`](#progress)
+      - [`results/`](#results)
+    - [📂 `src/arnes_hpc/`](#-srcarnes_hpc)
+  - [📊 Data](#-data)
+  - [🔁 Reproducibility](#-reproducibility)
+    - [🐍 Local setup with Conda](#-local-setup-with-conda)
+    - [📓 Notebooks](#-notebooks)
+    - [🌐 Streamlit app](#-streamlit-app)
+    - [💻 ARNES HPC cluster setup](#-arnes-hpc-cluster-setup)
+  - [🧪 Experiments](#-experiments)
+    - [1️⃣ Base-instructed (prompting only)](#1️⃣-base-instructed-prompting-only)
+    - [2️⃣ Fine-Tuned](#2️⃣-fine-tuned)
+    - [3️⃣ Fine-Tuned + instructed](#3️⃣-fine-tuned--instructed)
+    - [4️⃣ Fine-tuned + instructed + RAG](#4️⃣-fine-tuned--instructed--rag)
+    - [✅ Evaluation](#-evaluation)
+      - [📈 Automatic evaluation](#-automatic-evaluation)
+      - [👥 Manual evaluation](#-manual-evaluation)
 ---
 
 
@@ -141,7 +161,7 @@ Follow these instructions depending on the setup (local or HPC):
 
 ---
 
-### Local setup with Conda
+### 🐍 Local setup with Conda
 
 You can start by creating the required environment using Conda. The provided `environment.yml` file will install all necessary dependencies under the environment name `nlp-project`. Later on we also provide separate instructions, for those who would prefer to manually install the needed dependencies.
 
@@ -207,5 +227,81 @@ Each of these jobs produces a `.txt` file containing model outputs for 500 examp
 
 All the files required for running are already available under the same directory on HPC, so the workflow is fully reproducible and requires no extra setup.
 
---- 
+---
+
+## 🧪 Experiments
+
+We explored four experimental settings to see the effectiveness of prompt engineering, fine-tuning, and retrieval-augmented generation (RAG).
+
+---
+
+### 1️⃣ Base-instructed (prompting only)
+
+We used the original `cjvt/GaMS-9B-Instruct` model with structured prompting. The input format was designed with our defined rules, and no parameter updates were performed.
+
+---
+
+### 2️⃣ Fine-Tuned
+
+We performed **QLoRA** fine-tuning of the `cjvt/GaMS-9B-Instruct` model using our processed `train_promet.jsonl` dataset. The dataset was split 80/20 for training and validation.
+
+We used:
+
+- **Quantisation**: 4-bit NF4 with bfloat16 compute  
+- **LoRA config**: `r=8`, `alpha=32`, `dropout=0.05`, targeting attention modules  
+- **Batching**: `batch_size=1` with `gradient_accumulation=8`  
+- **Max length**: 512 tokens  
+- **Epochs**: 3  
+- **Scheduler**: cosine with warmup  
+- **Precision**: bfloat16  
+- **Optimizer**: AdamW
+
+The adapter and tokenizer were saved to disk for later inference.
+
+---
+
+### 3️⃣ Fine-Tuned + instructed
+
+We used the fine-tuned model, but kept the structured prompts to guide generation, essentially combining both approaches.
+
+---
+
+### 4️⃣ Fine-tuned + instructed + RAG
+
+We enhanced the instructed setup with **retrieval-augmented generation** using dense LaBSE embeddings. We embedded and indexed road and instruction snippets, retrieved the most relevant ones based on cosine similarity to input, and added them to the prompt.
+
+---
+
+### ✅ Evaluation
+
+#### 📈 Automatic evaluation
+
+We used **SloBERTa** and **cosine similarity** to score the model outputs against ground-truth references across all 4 settings on 500 test samples.
+
+#### 👥 Manual evaluation
+
+To get a better sense of model quality, we designed a **Streamlit-based web app** (`app_evaluation.py`) to allow all three of us to independently rank outputs of all 4 scenarios per example.
+
+We followed this process:
+
+1. **Pre-evaluation calibration** — we manually rated 50 **calibration examples** and compared our ranking differences to improve rating agreement. This helped us normalize our evaluation criteria and better understand nuances in generated outputs.
+
+2. **Final evaluation** — we then independently rated **30 examples each**, across all four model variants.
+
+For each example and scenario, we:
+
+- Gave **a rating from 1 to 5**, assessing the overall usefulness and clarity.
+
+- Compared each output directly to the ground-truth report, noting whether the generated output was better or worse.
+
+The final scores are computed as a **global average** across all three of us for both criteria.
+
+🖼️ The Streamlit app used for manual evaluation:
+
+![Manual evaluation app](src/evaluation/app/evaluation_example.png)
+
+Results from both evaluations are summarized in the next section.
+
+---
+
 [⬆️ back to top](#-table-of-contents)
