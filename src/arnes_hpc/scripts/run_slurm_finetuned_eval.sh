@@ -1,12 +1,11 @@
-#!/bin/bash
-#SBATCH --job-name=run-finetuned-gams9b-h100
+#SBATCH --job-name=run-finetuned
 #SBATCH --partition=gpu
-#SBATCH --nodelist=gwn[08-10]
 #SBATCH --nodes=1
+#SBATCH --nodelist=wn[201-223]
 #SBATCH --gpus=1
 #SBATCH --cpus-per-task=8
-#SBATCH --mem=60G
-#SBATCH --time=24:00:00
+#SBATCH --mem=30G
+#SBATCH --time=04:30:00
 #SBATCH --output=logs/%x-%j.out
 #SBATCH --error=logs/%x-%j.err
 

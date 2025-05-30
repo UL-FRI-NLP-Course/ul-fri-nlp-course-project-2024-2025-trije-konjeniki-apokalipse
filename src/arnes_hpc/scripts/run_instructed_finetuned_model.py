@@ -1,4 +1,6 @@
-import json, random, torch
+import json
+import random
+import torch
 from pathlib import Path
 from datasets import Dataset
 from transformers import (
@@ -7,13 +9,14 @@ from transformers import (
 from peft import PeftModel
 
 # ─── CONFIG ──────────────────────────────────────────────────────
-SEED        = 42
-BASE_ID     = "cjvt/GaMS-9B-Instruct"
-ADAPT_DIR   = "models/test_model_9b"       # fine-tuned adapter dir
-JSONL       = "train_promet.jsonl"
-N_SAMPLES   = 50
+SEED       = 42
+BASE_ID    = "cjvt/GaMS-9B-Instruct"
+ADAPT_DIR  = "models/test_model_9b"      # path to your saved adapter
+JSONL      = "train_promet.jsonl"
+N_SAMPLES  = 500
+INSTR_FILE = "instructions.txt"
 
-# ─── 1) rebuild the 80/20 split ──────────────────────────────────
+# ─── 1) Rebuild 80/20 split ─────────────────────────────────────
 records = []
 with open(JSONL, encoding="utf-8") as fh:
     for ln in fh:
@@ -27,12 +30,15 @@ full = Dataset.from_list(records).shuffle(seed=SEED)
 cut  = int(0.8 * len(full))
 eval_ds = full.select(range(cut, len(full)))
 
-# ─── 2) sample 50 examples reproducibly ─────────────────────────
+# ─── 2) Sample 1000 examples reproducibly ─────────────────────────
 random.seed(SEED)
 idxs = random.sample(range(len(eval_ds)), N_SAMPLES)
 subset = eval_ds.select(idxs)
 
-# ─── 3) load model + adapter in 4-bit QLoRA ──────────────────────
+# ─── 3) Load instructions text ──────────────────────────────────
+instr = Path(INSTR_FILE).read_text(encoding="utf-8").strip()
+
+# ─── 4) Load model + adapter in 4-bit QLoRA ────────────────────
 bnb = BitsAndBytesConfig(
     load_in_4bit=True,
     bnb_4bit_quant_type="nf4",
@@ -58,8 +64,9 @@ print("→ applying LoRA adapter…")
 model = PeftModel.from_pretrained(base, ADAPT_DIR)
 model.eval()
 
-# ─── 4) generation helper ────────────────────────────────────────
-def generate(prompt: str, max_new: int = 256) -> str:
+# ─── 5) Generation helper ───────────────────────────────────────
+def generate_with_instr(raw: str, max_new: int = 256) -> str:
+    prompt = instr + "\n\n" + raw + "\n\n### Assistant:"
     inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
     with torch.no_grad():
         out = model.generate(
@@ -69,23 +76,21 @@ def generate(prompt: str, max_new: int = 256) -> str:
             do_sample=False
         )
     text = tokenizer.decode(out[0], skip_special_tokens=True)
-    # strip prompt echo
+    # strip echoed prompt if present
     return text[len(prompt):].lstrip() if text.startswith(prompt) else text
 
-# ─── 5) write qualitative report ─────────────────────────────────
-out_path = Path("qualitative_eval_50_finetuned.txt")
-with out_path.open("w", encoding="utf-8") as f:
-    for i, ex in enumerate(subset, 1):
-        inp = ex["prompt"].strip()
-        gt  = ex["response"].strip()
+# ─── 6) Write qualitative report ────────────────────────────────
+out = Path("qualitative_eval_500_with_instructions.txt").open("w", encoding="utf-8")
+for i, ex in enumerate(subset, 1):
+    print(f"Processing example {i}/{N_SAMPLES}")
+    inp = ex["prompt"].strip()
+    gt  = ex["response"].strip()
 
-        f.write(f"=== Example {i}/{N_SAMPLES} ===\n\n")
-        f.write("INPUT:\n")
-        f.write(inp + "\n\n")
-        f.write("GROUND-TRUTH:\n")
-        f.write(gt + "\n\n")
-        f.write("MODEL-OUTPUT:\n")
-        f.write(generate(inp) + "\n\n")
-        f.write("="*70 + "\n\n")
+    out.write(f"=== Example {i}/{N_SAMPLES} ===\n\n")
+    out.write("INPUT:\n" + inp + "\n\n")
+    out.write("GROUND-TRUTH:\n" + gt + "\n\n")
+    out.write("MODEL-OUTPUT:\n" + generate_with_instr(inp) + "\n\n")
+    out.write("="*80 + "\n\n")
+out.close()
 
-print(f"✔ wrote qualitative report → {out_path.resolve()}")
+print(f"✔  Wrote report → {Path('qualitative_eval_500_with_instructions.txt').resolve()}")
