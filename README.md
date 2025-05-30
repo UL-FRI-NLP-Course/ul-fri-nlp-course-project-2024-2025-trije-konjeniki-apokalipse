@@ -301,7 +301,7 @@ To get a better sense of model quality, we designed a **Streamlit-based web app*
 
 We followed this process:
 
-1. **Pre-evaluation calibration** — we manually rated 50 **calibration examples** and compared our ranking differences to improve rating agreement. This helped us normalize our evaluation criteria and better understand nuances in generated outputs.
+1. **Pre-evaluation calibration** — we manually rated 10 **calibration examples** and compared our ranking differences to improve rating agreement. This helped us normalize our evaluation criteria and better understand nuances in generated outputs.
 
 2. **Final evaluation** — we then independently rated **30 examples each**, across all four model variants.
 
@@ -336,7 +336,7 @@ We evaluated all four experimental setups using **two types of evaluation**:
 |-------------------------------|-----------------|------------------|------------------|------------------------------|
 | Base instructed                | 0.608 ± 0.004   | 0.683 ± 0.004    | 0.643 ± 0.004    | 1.904 ± 0.042                |
 | Fine-tuned                    | 0.774 ± 0.003   | 0.753 ± 0.004    | 0.762 ± 0.003    | 0.818 ± 0.022                |
-| Fine-tuned and instructed     | **0.817 ± 0.003** | **0.752 ± 0.004** | **0.781 ± 0.003** | **0.732 ± 0.017**            |
+| Fine-tuned and instructed     | 0.817 ± 0.003 | 0.752 ± 0.004 | 0.781 ± 0.003 | 0.732 ± 0.017            |
 | Fine-tuned and instructed + RAG | 0.815 ± 0.003   | 0.752 ± 0.004    | 0.779 ± 0.003    | 0.752 ± 0.018                |
 
 ---
@@ -345,10 +345,10 @@ We evaluated all four experimental setups using **two types of evaluation**:
 
 | Scenario                      | Avg. Rating | % Outputs better than ground truth |
 |------------------------------|-------------|------------------------------------|
-| Base instructed              | 2.00        | 6.7%                               |
-| Fine-tuned                  | 3.17        | 40.0%                              |
-| Fine-tuned + instructed     | **3.37**    | **43.3%**                          |
-| Fine-tuned + instructed + RAG | 3.30        | 40.0%                              |
+| Base instructed              | 1.97 ± 0.10       | 6.7% ± 2.6%                               |
+| Fine-tuned                  | 3.01 ± 0.13        | 22.2% ± 4.4%                              |
+| Fine-tuned + instructed     | 3.20 ± 0.11    | 28.9% ± 4.8                          |
+| Fine-tuned + instructed + RAG | 3.07 ± 0.12        | 25.6% ± 4.6%                              |
 
 ---
 
