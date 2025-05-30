@@ -10,7 +10,8 @@
 ---
 
 ## 📑 Table of contents
-- [Project structure](#-project-structure)
+- [📂 Project structure](#-project-structure)
+- [📊 Data](#-data)
 - [Reproducibility](#-reproducibility)
   - [Local setup with Conda](#local-setup-with-conda)
   - [📓 Notebooks](#-notebooks)
@@ -119,6 +120,21 @@ Everything needed to run our **full experiments on the ARNES HPC cluster**:
 
 ---
 
+## 📊 Data
+
+The dataset used in this project is **not included in this GitHub repository** due to size. However, you can download it from the following link:
+
+🔗 [Shared dataset folder (OneDrive)](https://unilj-my.sharepoint.com/:f:/g/personal/mz1034_student_uni-lj_si/Ev3111JpDF5GnWOgAbfmoj4B8Co1IlAyHUzjfHKZhusvjA?e=HB6Tvy)
+
+
+The shared folder contains the original traffic report data, and also our processed training data.
+
+We created a clean, structured JSONL file called `train_promet.jsonl`, which is used for fine-tuning the language model. Each entry is a JSON object with two keys:  
+- `"prompt"` — a system-like input containing raw structured text  
+- `"response"` — the corresponding expected radio-ready traffic report
+
+---
+
 ## 🔁 Reproducibility
 
 Follow these instructions depending on the setup (local or HPC):
@@ -156,7 +172,7 @@ To run the manual evaluation Streamlit app in `src/evaluation/app/app_evaluation
 pip install pandas streamlit
 ```
 
-You can then launch the appllication using:
+You can then launch the application using:
 ```bash
 cd src/evaluation/app
 streamlit run app_evaluation.py
@@ -190,3 +206,6 @@ The structure is modular — for each `.sh` (Slurm script) there's a correspondi
 Each of these jobs produces a `.txt` file containing model outputs for 500 examples. These results are stored and used later for manual and automatic evaluation.
 
 All the files required for running are already available under the same directory on HPC, so the workflow is fully reproducible and requires no extra setup.
+
+--- 
+[⬆️ back to top](#-table-of-contents)
