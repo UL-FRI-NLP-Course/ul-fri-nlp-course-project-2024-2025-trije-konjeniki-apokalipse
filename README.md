@@ -37,6 +37,10 @@
     - [✅ Evaluation](#-evaluation)
       - [📈 Automatic evaluation](#-automatic-evaluation)
       - [👥 Manual evaluation](#-manual-evaluation)
+  - [📊 Results](#-results)
+    - [🔬 Automatic evaluation (SloBERTa cosine similarity)](#-automatic-evaluation-sloberta-cosine-similarity)
+    - [👥 Manual evaluation](#-manual-evaluation-1)
+    - [📈 F1 score distribution](#-f1-score-distribution)
 ---
 
 
@@ -301,6 +305,45 @@ The final scores are computed as a **global average** across all three of us for
 ![Manual evaluation app](src/evaluation/app/evaluation_example.png)
 
 Results from both evaluations are summarized in the next section.
+
+---
+
+## 📊 Results
+
+We evaluated all four experimental setups using **two types of evaluation**:
+
+- **Automatic evaluation** using **SloBERTa + cosine similarity** on 500 test examples.
+- **Manual evaluation** of 30 test examples.
+
+---
+
+### 🔬 Automatic evaluation (SloBERTa cosine similarity)
+
+| Model                          | Precision       | Recall          | F1-score        | Length difference (in words) |
+|-------------------------------|-----------------|------------------|------------------|------------------------------|
+| Base instructed                | 0.608 ± 0.004   | 0.683 ± 0.004    | 0.643 ± 0.004    | 1.904 ± 0.042                |
+| Fine-tuned                    | 0.774 ± 0.003   | 0.753 ± 0.004    | 0.762 ± 0.003    | 0.818 ± 0.022                |
+| Fine-tuned and instructed     | **0.817 ± 0.003** | **0.752 ± 0.004** | **0.781 ± 0.003** | **0.732 ± 0.017**            |
+| Fine-tuned and instructed + RAG | 0.815 ± 0.003   | 0.752 ± 0.004    | 0.779 ± 0.003    | 0.752 ± 0.018                |
+
+---
+
+### 👥 Manual evaluation
+
+| Scenario                      | Avg. Rating | % Outputs better than ground truth |
+|------------------------------|-------------|------------------------------------|
+| Base instructed              | 2.00        | 6.7%                               |
+| Fine-tuned                  | 3.17        | 40.0%                              |
+| Fine-tuned + instructed     | **3.37**    | **43.3%**                          |
+| Fine-tuned + instructed + RAG | 3.30        | 40.0%                              |
+
+---
+
+### 📈 F1 score distribution
+
+The histogram below shows the distribution of **F1 scores** across the 500 test examples, highlighting performance spread per method.
+
+![F1 score distribution](src/evaluation/results/f1_distribution.png)
 
 ---
 
