@@ -191,7 +191,7 @@ conda activate nlp-project
 
 ### 📓 Notebooks
 
-All notebooks under `notebooks/` are designed for local execution — with the exception of `finetuning_example.ipynb`, which is a simplified demo version of LoRA fine-tuning, and is prepared for execution on Colab.
+All notebooks under `src/notebooks/` are designed for local execution — with the exception of `finetuning_example.ipynb`, which is a simplified demo version of LoRA fine-tuning, and is prepared for execution on Colab.
 
 To run notebooks locally, make sure the following Python packages are installed (already included via `environment.yml`, but if you would prefer to do manual installation):
 
